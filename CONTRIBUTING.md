@@ -16,6 +16,7 @@ There is no dependency manifest or project package-install step. The validation 
 - `TOOLANG.ps1` - application entry point and embedded C# implementation
 - `data\ne_10m_land.shp` - local Natural Earth land polygons used by the application
 - `data\Natural_Earth_ne_10m_land.zip` - retained source archive and source README
+- `research\` - academic framing, evidence scope, provenance register, and selected exploratory scripts
 - `validation\validate.ps1` - focused offline validation runner
 - `validation\validation-results.json` - latest generated validation result
 

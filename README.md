@@ -31,6 +31,8 @@ AI assistance: ChatGPT Codex and GitHub Copilot.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidance, [VALIDATION.md](VALIDATION.md) for the validation command and its scope, and [SECURITY.md](SECURITY.md) for private vulnerability reporting guidance.
 
+For the project's academic framing, research questions, evidence scope, and material provenance, see the [research guide](research/README.md) and [material register](research/material-register.md).
+
 ## Worker scheduling
 
 TOOLANG uses 16 in-process FIFO queues and round-robin dispatch. Two PowerShell worker runspaces handle Windy address-bar reads and NHC feed/GIS refresh work. The queue scheduler keeps at most one pending map poll and one pending NHC refresh, so repeated polling cannot build an unbounded backlog. The GDI window, message loop, and static drawing remain on a dedicated UI thread. It waits in the Windows message loop while idle; workers only read data or publish completed weather state.
