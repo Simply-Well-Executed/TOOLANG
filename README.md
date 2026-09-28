@@ -1,4 +1,4 @@
-# TOOLANG — Windy hurricane overlay
+# TOOLANG — Windy hurricane overlay 🌦️
 
 This PowerShell 7 script draws a click-through GDI overlay over the visible Windy map in Chrome. It combines National Hurricane Center (NHC) current-storm data and GIS forecast products with a local Natural Earth land polygon file. The displayed layers keep current motion, forecast track, forecast uncertainty, wind extent, point probabilities, and the custom nearest-land geometry distinct.
 
