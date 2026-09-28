@@ -23,6 +23,8 @@ pwsh -NoProfile -File .\TOOLANG.ps1 `
 
 ## Project files and contributor information
 
+AI assistance: ChatGPT Codex and GitHub Copilot.
+
 - `TOOLANG.ps1` contains the PowerShell coordinator and embedded C# overlay.
 - `data\` contains the Natural Earth land shapefile and retained source archive.
 - `validation\` contains the dependency-free validation runner and its latest JSON result manifest.
