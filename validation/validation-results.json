@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "project": "TOOLANG",
+  "generatedAtUtc": "2026-09-28T12:43:39.9667076+00:00",
+  "status": "passed_with_limitations",
+  "command": "pwsh -NoProfile -File .\\validation\\validate.ps1",
+  "toolVersions": {
+    "powerShell": "7.6.6",
+    "powerShellEdition": "Core",
+    "dotNetRuntime": ".NET 10.0.12"
+  },
+  "projectCommands": {
+    "unitTests": null,
+    "typeCheck": null,
+    "notes": "No pre-existing unit-test files or unit/type-check commands are configured."
+  },
+  "coverage": {
+    "supported": false,
+    "notes": "No project coverage or test-reporting tooling is configured."
+  },
+  "typeValidation": {
+    "powerShell": "Parser validation only; no static PowerShell type-check command is configured.",
+    "embeddedCSharp": "passed: compiled with PowerShell Add-Type"
+  },
+  "source": {
+    "path": "TOOLANG.ps1",
+    "sha256": "3602595F3414E3F4980A4DBD67C43F3AC09DB0166B01AFEC86A0AB901B647D5F"
+  },
+  "summary": {
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0
+  },
+  "limitations": [
+    "No pre-existing project unit-test or type-check command or unit-test files were configured; focused checks are provided by this runner.",
+    "No static PowerShell type checker is configured; the script was parser-validated and its embedded C# was compiled."
+  ],
+  "existingUnitTestFiles": [],
+  "artifactPaths": [
+    "validation\\validate.ps1",
+    "validation\\validation-results.json"
+  ],
+  "checks": [
+    {
+      "name": "PowerShell source syntax",
+      "status": "passed",
+      "details": "0 parser errors"
+    },
+    {
+      "name": "Isolate Windy map parser",
+      "status": "passed",
+      "details": "Loaded the function AST without running application startup."
+    },
+    {
+      "name": "Embedded C# compilation and type validation",
+      "status": "passed",
+      "details": "Compiled embedded C# source (118040 characters)."
+    },
+    {
+      "name": "Windy map parser accepts HTTPS coordinates",
+      "status": "passed",
+      "details": "Parsed latitude, longitude, and zoom."
+    },
+    {
+      "name": "Windy map parser accepts scheme-less address-bar URLs",
+      "status": "passed",
+      "details": "Parsed scheme-less latitude, longitude, and zoom."
+    },
+    {
+      "name": "Windy map parser accepts projection boundaries",
+      "status": "passed",
+      "details": "Accepted inclusive latitude, longitude, and zoom limits."
+    },
+    {
+      "name": "Windy map parser rejects foreign host",
+      "status": "passed",
+      "details": "Rejected foreign host."
+    },
+    {
+      "name": "Windy map parser rejects latitude outside Web Mercator",
+      "status": "passed",
+      "details": "Rejected latitude outside Web Mercator."
+    },
+    {
+      "name": "Windy map parser rejects longitude outside range",
+      "status": "passed",
+      "details": "Rejected longitude outside range."
+    },
+    {
+      "name": "Windy map parser rejects zoom outside range",
+      "status": "passed",
+      "details": "Rejected zoom outside range."
+    },
+    {
+      "name": "Windy map parser rejects malformed coordinates",
+      "status": "passed",
+      "details": "Rejected malformed coordinates."
+    },
+    {
+      "name": "C# map scale at equator and zoom zero",
+      "status": "passed",
+      "details": "156543.033928041 meters per pixel."
+    },
+    {
+      "name": "C# map scale adjusts for latitude",
+      "status": "passed",
+      "details": "60-degree scale is half the equatorial scale."
+    },
+    {
+      "name": "C# map scale adjusts for zoom and DPI",
+      "status": "passed",
+      "details": "One zoom level and 2x DPI each halve meters per pixel."
+    },
+    {
+      "name": "C# map scale clamps latitude to projection limit",
+      "status": "passed",
+      "details": "Latitudes beyond the projection limit are clamped."
+    },
+    {
+      "name": "C# map scale rejects nonpositive DPI",
+      "status": "passed",
+      "details": "Rejected zero DPI scale with ArgumentOutOfRangeException."
+    }
+  ]
+}
